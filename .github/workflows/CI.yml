@@ -34,13 +34,15 @@ jobs:
             ${{ runner.os }}-test-
             ${{ runner.os }}-
       - uses: julia-actions/julia-buildpkg@v1
-      - name: Adjust dependencies for non-1.11 Julia versions
+      - name: Remove incompatible Manifest.toml
+        if: matrix.version != '1.11'
+        run: rm -f Manifest.toml
+      - name: Instantiate environment for non-1.11 Julia
         if: matrix.version != '1.11'
         run: |
           julia -e '
             using Pkg
             Pkg.activate(".")
-            Pkg.resolve()
             Pkg.instantiate()
           '
       - uses: julia-actions/julia-runtest@v1
