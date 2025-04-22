@@ -1,5 +1,4 @@
 using MyProject
-using NewtonMethod
 using Test
 
 @testset "foo checks" begin
