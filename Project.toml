@@ -9,7 +9,7 @@ Expectations = "2fe49d83-0758-5602-8f54-1f90ad0d522b"
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 
 [compat]
-Distributions = "0.25.119"
+Distributions = "0.25"
 Expectations = "1.9.2"
 Test = "1"
 julia = "1.9"
