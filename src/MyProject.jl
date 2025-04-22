@@ -9,6 +9,10 @@ function foo(mu = 1., sigma = 2.)
     return E(x -> sin(x))
 end
 
+function bar()
+    return 10
+end
+
 export foo
 
 end
